@@ -7,9 +7,9 @@ def load_questions(filename):
     questions = {}
     with open(filename, 'r') as file:
         for line in file:
-            if line:=line.strip():
+            if line := line.strip():
                 q_num, q_text = line.split(': ', 1)
-                q_text=q_text.replace('\\n', '\n')
+                q_text = q_text.replace('\\n', '\n')
                 questions[int(q_num)] = q_text.strip()
     return questions
 
@@ -17,24 +17,23 @@ def load_answers(filename):
     answers = {}
     with open(filename, 'r') as file:
         for line in file.readlines():
-            if line:=line.strip():
+            if line := line.strip():
                 q_num, ans = line.split(': ', 1)
                 answers[int(q_num)] = ans.strip()
-                
     return answers
 
 def load_topic_questions(topic):
     return {
-        "Easy": load_questions(f'QuizApp/questions/{topic}/Easy.txt'),
-        "Medium": load_questions(f'QuizApp/questions/{topic}/Medium.txt'),
-        "Hard": load_questions(f'QuizApp/questions/{topic}/Hard.txt')
+        "Easy": load_questions(f'./questions/{topic}/Easy.txt'),
+        "Medium": load_questions(f'./questions/{topic}/Medium.txt'),
+        "Hard": load_questions(f'./questions/{topic}/Hard.txt')
     }
 
 def load_topic_answers(topic):
     return {
-        "Easy": load_answers(f'QuizApp/answers/{topic}/Easy.txt'),
-        "Medium": load_answers(f'QuizApp/answers/{topic}/Medium.txt'),
-        "Hard": load_answers(f'QuizApp/answers/{topic}/Hard.txt')
+        "Easy": load_answers(f'./answers/{topic}/Easy.txt'),
+        "Medium": load_answers(f'./answers/{topic}/Medium.txt'),
+        "Hard": load_answers(f'./answers/{topic}/Hard.txt')
     }
 
 # Question Banks
@@ -97,56 +96,58 @@ def quiz():
     Main function to conduct the quiz.
     Handles question selection, timing, accuracy calculation, and result visualization.
     """
-    global c, userAns, score, total, time, start_time, end_time,l,d,times
-      # Stores accuracy per topic
+    global c, userAns, score, total, time, start_time, end_time, l, d, times
     global userAns  # Ensure userAns is updated globally
     
-    diff_mode = input("Enter Difficulty mode of Quiz(Easy, Medium and Hard): ")
+    diff_mode = input("Enter Difficulty mode of Quiz (Easy, Medium and Hard): ")
     try:
-      a = int(input("Enter the number of topics: \nLists\nDictionaries\nStrings\nOperators\nFunctions\n"))
+        a = int(input("Enter the number of topics: \nLists\nDictionaries\nStrings\nOperators\nFunctions\n"))
     except:
-        print("Invalid input,Topics are less than your input")
+        print("Invalid input, Topics are less than your input.")
+    
     for i in range(a):
         b = input(f"Enter topic {i + 1}: ")
         try:
-         no_of_ques = int(input("Enter number of questions: "))
+            no_of_ques = int(input("Enter number of questions: "))
         except:
-            print("Invalid input,Number of questions are less than your input")
-        prefernce_ques = int(0.6 * no_of_ques)+1
+            print("Invalid input, Number of questions are less than your input.")
+        
+        prefernce_ques = int(0.6 * no_of_ques) + 1
         # Reset d and select questions
         d = [i for i in range(1, 6)]
         selected_questions = random.sample(d, prefernce_ques)
-       
-        c[b] = {"Easy": {},"Medium": {}, "Hard":{}}
+        
+        c[b] = {"Easy": {}, "Medium": {}, "Hard": {}}
         for j in selected_questions:
             c[b][diff_mode][j] = [topics[b][diff_mode][j]]
+        
         if diff_mode == "Easy":
-            left_ques=no_of_ques-prefernce_ques
+            left_ques = no_of_ques - prefernce_ques
             d1 = [i for i in range(1, 6)]
-            selected_questions1 = random.sample(d1, left_ques//2)
+            selected_questions1 = random.sample(d1, left_ques // 2)
             for j in selected_questions1:
                 c[b]["Medium"][j] = [topics[b]["Medium"][j]]
-            selected_questions2 = random.sample(d1, left_ques - (left_ques//2))
+            selected_questions2 = random.sample(d1, left_ques - (left_ques // 2))
             for j in selected_questions2:
                 c[b]["Hard"][j] = [topics[b]["Hard"][j]]
 
         elif diff_mode == "Medium":
-            left_ques=no_of_ques-prefernce_ques
+            left_ques = no_of_ques - prefernce_ques
             d1 = [i for i in range(1, 6)]
-            selected_questions1 = random.sample(d1, left_ques//2)
+            selected_questions1 = random.sample(d1, left_ques // 2)
             for j in selected_questions1:
                 c[b]["Easy"][j] = [topics[b]["Easy"][j]]
-            selected_questions2 = random.sample(d1, left_ques - (left_ques//2))
+            selected_questions2 = random.sample(d1, left_ques - (left_ques // 2))
             for j in selected_questions2:
                 c[b]["Hard"][j] = [topics[b]["Hard"][j]]
 
         elif diff_mode == "Hard":
-            left_ques=no_of_ques-prefernce_ques
+            left_ques = no_of_ques - prefernce_ques
             d1 = [i for i in range(1, 6)]
-            selected_questions1 = random.sample(d1, left_ques//2)
+            selected_questions1 = random.sample(d1, left_ques // 2)
             for j in selected_questions1:
                 c[b]["Easy"][j] = [topics[b]["Easy"][j]]
-            selected_questions2 = random.sample(d1, left_ques - (left_ques//2))
+            selected_questions2 = random.sample(d1, left_ques - (left_ques // 2))
             for j in selected_questions2:
                 c[b]["Medium"][j] = [topics[b]["Medium"][j]]
 
@@ -156,33 +157,34 @@ def quiz():
         userAns[topic] = {}
         
         count = 0  # Correct answers for this topic
-        for j in ["Easy","Medium","Hard"]:
-            userAns[topic][j]={}
+        for j in ["Easy", "Medium", "Hard"]:
+            userAns[topic][j] = {}
 
             for question_id in c[topic][j]:
                 clear_screen()
                 start_time = time.time()
-                userAns[topic][j][question_id]={}
+                userAns[topic][j][question_id] = {}
                 print(c[topic][j][question_id][0])
-                userAns[topic][j][question_id] = input("Your answer: ")
+                userAns[topic][j][question_id] = input("Your answer: ").strip()
 
                 end_time = time.time()
                 times[g] = end_time - start_time
                 g += 1
 
                 # Check answer
-                if userAns[topic][j][question_id] == ans[topic][j][question_id]:
+                correct_answer = ans[topic][j][question_id].strip().strip('"')  # Strip the correct answer
+                user_answer = userAns[topic][j][question_id].strip()  # Already stripped
+                if user_answer == correct_answer:
                     print("Correct answer!")
                     count += 1
                 else:
-                    print("Incorrect answer!")
+                    print(f"Incorrect answer {user_answer}! Correct answer was: {correct_answer}")
                 time.sleep(1.3)
 
         # Calculate accuracy for the topic
+        accuracy[topic] = (count / (len(c[topic]["Easy"]) + len(c[topic]["Medium"]) + len(c[topic]["Hard"]))) * 100
         
-        accuracy[topic] = (count / (len(c[topic]["Easy"])+len(c[topic]["Medium"])+len(c[topic]["Hard"]))) * 100
-        
-    #  Visualization
+    # Visualization
     visualize_results(accuracy, times)
 
 def visualize_results(accuracy, times):
@@ -220,3 +222,4 @@ def visualize_results(accuracy, times):
 # Run the quiz
 quiz()
 print("Thanks")
+
