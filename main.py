@@ -219,3 +219,4 @@ def visualize_results(accuracy, times):
 
 # Run the quiz
 quiz()
+print("Thanks")
