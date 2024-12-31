@@ -1,0 +1,5 @@
+1: "What is the output of print('Hello'.upper())?\n(a) HELLO\n(b) Hello\n(c) hello\n(d) Error"
+        2: "What does 'len()' return when applied to a string?\n(a) The number of words\n(b) The number of characters\n(c) The number of lines\n(d) None of the above"
+        3: "How do you access the first character of a string?\n(a) string[0]\n(b) string.first()\n(c) string.char(0)\n(d) None of the above"
+        4: "Which operator is used to concatenate strings?\n(a) *\n(b) +\n(c) -\n(d) /"
+        5: "What is the output of 'Python'[0:3]?\n(a) Pyt\n(b) Py\n(c) on\n(d) Error"

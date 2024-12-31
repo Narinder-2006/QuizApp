@@ -1,0 +1,5 @@
+1: "How do you add an element to the end of a list?\n(a) list.add()\n(b) list.append()\n(c) list.insert()\n(d) list.extend()"
+        2: "How do you access the first element of a list?\n(a) list[0]\n(b) list(0)\n(c) list.first()\n(d) list[1]"
+        3: "How do you remove an item from a list?\n(a) list.delete()\n(b) list.remove()\n(c) list.pop()\n(d) Both b and c"
+        4: "What is the output of len([1, 2, 3])?\n(a) 3\n(b) 2\n(c) 1\n(d) Error"
+        5: "What is the default value of a missing index in slicing?\n(a) 0\n(b) None\n(c) -1\n(d) Depends on the operation"

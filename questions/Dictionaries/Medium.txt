@@ -1,0 +1,5 @@
+1: "What is the output of dict.get('missing_key')?\n(a) None\n(b) Error\n(c) False\n(d) Empty string"
+        2: "How do you iterate over both keys and values?\n(a) for k, v in dict.items()\n(b) for k, v in dict.values()\n(c) for k in dict\n(d) None of the above"
+        3: "What is the default data type of keys in Python dictionaries?\n(a) String\n(b) Integer\n(c) Hashable\n(d) None of the above"
+        4: "Which function merges two dictionaries?\n(a) update()\n(b) merge()\n(c) add()\n(d) None of the above"
+        5: "What happens if a key is reassigned?\n(a) Error\n(b) Updates the value\n(c) Adds a duplicate\n(d) None of the above"

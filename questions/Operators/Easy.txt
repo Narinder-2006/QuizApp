@@ -1,0 +1,5 @@
+1: "What is the output of print(10 // 3)?\n(a) 3.33\n(b) 3\n(c) 4\n(d) Error"
+        2: "Which operator is used for exponentiation in Python?\n(a) ^\n(b) **\n(c) *\n(d) %%"
+        3: "What is the output of print(5 % 2)?\n(a) 1\n(b) 0\n(c) 2\n(d) 5"
+        4: "Which operator is used to check equality?\n(a) =\n(b) ==\n(c) equals()\n(d) ==="
+        5: "What is the output of print(10 > 5 and 5 < 10)?\n(a) True\n(b) False\n(c) Error\n(d) None"

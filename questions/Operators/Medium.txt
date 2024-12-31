@@ -1,0 +1,5 @@
+1: "What is the output of print(10 / 3)?\n(a) 3.33\n(b) 3.0\n(c) 3\n(d) Error"
+        2: "Which operator performs floor division?\n(a) /\n(b) //\n(c) %%\n(d) div()"
+        3: "What is the output of print(5 != 3)?\n(a) True\n(b) False\n(c) Error\n(d) None"
+        4: "What is the output of print(2 ** 3 * 4)?\n(a) 64\n(b) 32\n(c) 12\n(d) 8"
+        5: "Which operator is used to check if a value is in a sequence?\n(a) in\n(b) not in\n(c) contains()\n(d) has()"

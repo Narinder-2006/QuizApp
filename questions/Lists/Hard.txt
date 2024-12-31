@@ -1,0 +1,5 @@
+ 1: "What does the 'zip' function return when applied to two lists?\n(a) A single list\n(b) A tuple\n(c) An iterator of tuples\n(d) None of the above"
+        2: "How do you create a list of tuples pairing elements from two lists?\n(a) zip(list1, list2)\n(b) list1 + list2\n(c) enumerate(list1, list2)\n(d) None of the above"
+        3: "How do you reverse a list in place?\n(a) list[::-1]\n(b) list.reverse()\n(c) reversed(list)\n(d) Both a and b"
+        4: "What does 'any()' do when applied to a list?\n(a) Returns True if all elements are True\n(b) Returns True if any element is True\n(c) Always returns False\n(d) None of the above"
+        5: "Which of these creates a 2D list in Python?\n(a) list([[], []])\n(b) [[1, 2], [3, 4]]\n(c) list[[], []]\n(d) Both a and b"

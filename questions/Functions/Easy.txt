@@ -1,0 +1,5 @@
+ 1: "What is the output of print(len('Python'))?\n(a) 6\n(b) 7\n(c) 5\n(d) 4"
+        2: "Which keyword is used to define a function in Python?\n(a) func\n(b) def\n(c) function\n(d) define"
+        3: "What is the output of print(max(3, 7, 1))?\n(a) 3\n(b) 7\n(c) 1\n(d) Error"
+        4: "Which function is used to convert a string to an integer?\n(a) str()\n(b) int()\n(c) float()\n(d) None"
+        5: "What is the output of print(sum([1, 2, 3]))?\n(a) 6\n(b) 5\n(c) 1\n(d) Error"

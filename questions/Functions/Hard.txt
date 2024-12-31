@@ -1,0 +1,5 @@
+1: "What is a recursive function?\n(a) A function that calls itself\n(b) A function that takes multiple arguments\n(c) A function that returns another function\n(d) None of the above"
+        2: "What is the output of print(pow(2, 3, 5))?\n(a) 3\n(b) 2\n(c) 8\n(d) 4"
+        3: "What is the output of def f(x): return x + 1; print(f(f(2)))?\n(a) 5\n(b) 6\n(c) 3\n(d) Error"
+        4: "Which keyword is used to create an anonymous function?\n(a) def\n(b) lambda\n(c) func\n(d) anonymous"
+        5: "What is the output of print(map(int, ['1', '2', '3']))?\n(a) <map object>\n(b) [1, 2, 3]\n(c) 1 2 3\n(d) Error"

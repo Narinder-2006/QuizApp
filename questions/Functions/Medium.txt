@@ -1,0 +1,5 @@
+1: "What is the output of print(abs(-10))?\n(a) 10\n(b) -10\n(c) 0\n(d) Error"
+        2: "What does the `return` statement do in a function?\n(a) Outputs the value\n(b) Ends the function execution\n(c) Both a and b\n(d) None of the above"
+        3: "Which of these is a valid function call?\n(a) my_function()\n(b) myFunction[]\n(c) my_function\n(d) None"
+        4: "What is the output of print(round(3.14159, 2))?\n(a) 3.14\n(b) 3.141\n(c) 3\n(d) 4"
+        5: "What is the output of print(type(len))?\n(a) <class 'builtin_function_or_method'>\n(b) <class 'function'>\n(c) <class 'int'>\n(d) Error"

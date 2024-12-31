@@ -1,0 +1,5 @@
+ 1: "How do you create a dictionary comprehension?\n(a) {k: v for k, v in iterable}\n(b) [k: v for k, v in iterable]\n(c) {k v for k, v in iterable}\n(d) None of the above"
+ 2: "What does 'setdefault()' do?\n(a) Adds a key-value pair\n(b) Updates a key's value\n(c) Returns the value for a key if it exists or adds the key\n(d) None of the above"
+ 3: "What is a frozenset?\n(a) A mutable set\n(b) An immutable set\n(c)None of above"
+ 4: "Name function to remove key from dictionaries?\n(a)remove\n(b)pop\n(c)both"
+ 5: "What is the output of dict.setdefault('key', 'default_value')?\n(a) i dont know\n(b)return key if present else add"

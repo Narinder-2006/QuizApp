@@ -1,0 +1,5 @@
+1: "What is the output of print((10 + 2) * 3 / 2)?\n(a) 18.0\n(b) 18\n(c) 12.0\n(d) 12"
+        2: "Which operator is used to perform bitwise AND?\n(a) &\n(b) &&\n(c) |\n(d) and"
+        3: "What is the precedence order of operators?\n(a) Exponentiation > Multiplication/Division > Addition/Subtraction\n(b) Multiplication/Division > Exponentiation > Addition/Subtraction\n(c) Addition/Subtraction > Exponentiation > Multiplication/Division\n(d) None of the above",
+        4: "What is the output of print(~5)?\n(a) -5\n(b) -6\n(c) 5\n(d) None"
+        5: "What is the output of print(10 | 4)?\n(a) 10\n(b) 4\n(c) 14\n(d) Error"
