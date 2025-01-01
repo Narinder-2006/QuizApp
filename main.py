@@ -76,15 +76,7 @@ def clear_screen():
     """
     os.system('cls' if os.name == 'nt' else 'clear')
 
-def result(score, total):
-    """
-    Displays the result of the quiz.
 
-    Args:
-        score (int): Total number of correct answers.
-        total (int): Total number of questions attempted.
-    """
-    print(f"You got {score}/{total} correct answers!")
 
 c = {}  # Stores selected questions
 times = {}  # Stores time taken for each question
@@ -187,6 +179,9 @@ def quiz():
     # Visualization
     visualize_results(accuracy, times)
 
+
+
+
 def visualize_results(accuracy, times):
     """
     Visualizes the quiz results using side-by-side bar charts.
@@ -195,31 +190,45 @@ def visualize_results(accuracy, times):
         accuracy (dict): Accuracy per topic as a percentage.
         times (dict): Time taken for each question.
     """
+    # Use classic style
+    plt.style.use('classic')
+
     # Create a figure with two subplots side by side
     fig, axs = plt.subplots(1, 2, figsize=(14, 6))  # 1 row, 2 columns
 
     # Plot accuracy bar chart
     x = list(accuracy.keys())
     y = list(accuracy.values())
-    axs[0].bar(x, y, color='blue')
-    axs[0].set_title("Accuracy by Topic")
-    axs[0].set_xlabel("Topic")
-    axs[0].set_ylabel("Accuracy (%)")
+    bars1 = axs[0].bar(x, y, color='blue')
+    axs[0].set_title("Accuracy by Topic", fontsize=14)
+    axs[0].set_xlabel("Topic", fontsize=12)
+    axs[0].set_ylabel("Accuracy (%)", fontsize=12)
     axs[0].tick_params(axis='x', rotation=45)
+    axs[0].grid(True, which='both', linestyle='--', linewidth=0.5)
+
+    # Add data labels
+    for bar in bars1:
+        height = bar.get_height()
+        axs[0].text(bar.get_x() + bar.get_width() / 2.0, height, f'{height:.2f}%', ha='center', va='bottom', fontsize=10)
 
     # Plot time bar chart
     x1 = list(times.keys())
     x2 = list(times.values())
-    axs[1].bar(x1, x2, color='green')
-    axs[1].set_title("Time Taken per Question")
-    axs[1].set_xlabel("Question Index")
-    axs[1].set_ylabel("Time (seconds)")
+    bars2 = axs[1].bar(x1, x2, color='green')
+    axs[1].set_title("Time Taken per Question", fontsize=14)
+    axs[1].set_xlabel("Question Index", fontsize=12)
+    axs[1].set_ylabel("Time (seconds)", fontsize=12)
+    axs[1].grid(True, which='both', linestyle='--', linewidth=0.5)
+
+    # Add data labels
+    for bar in bars2:
+        height = bar.get_height()
+        axs[1].text(bar.get_x() + bar.get_width() / 2.0, height, f'{height:.2f}s', ha='center', va='bottom', fontsize=10)
 
     # Adjust layout for better spacing
     plt.tight_layout()
-    plt.show()
-
+    plt.show()   
 # Run the quiz
 quiz()
-print("Thanks")
+print("Thank You!")
 
