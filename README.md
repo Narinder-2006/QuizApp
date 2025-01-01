@@ -54,7 +54,7 @@ The project should follow this structure:
 
 Enter Difficulty mode of Quiz (Easy, Medium and Hard): Easy Enter the number of topics: Lists Dictionaries Strings Operators Functions
 
-![example](./images\starting.JPG)
+![example](./images/starting.JPG)
 
 ## Results Visualization
 
@@ -70,13 +70,13 @@ This chart displays the accuracy percentage for each topic in the quiz. A higher
 
 This chart displays the time taken for each question, measured in seconds. A lower value indicates quicker responses!
 
-![Time Taken and Accuracy per Question](./images\graphs.JPG)
+![Time Taken and Accuracy per Question](./images/graphs.JPG)
 
 ### Full Results Example
 
 Here’s a complete visual summary of your quiz performance:
 
-![Full Results Example](./images\quespreview.JPG)
+![Full Results Example](./images/quespreview.JPG)
 
 ## Contributing
 
