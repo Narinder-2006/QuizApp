@@ -95,5 +95,10 @@ If you would like to contribute to this project, feel free to fork the repositor
 - [matplotlib](https://matplotlib.org/) for the charting library
 - Open-source contributors and communities that help in learning and development
 
+Developed By:
+[Narinder Partap Singh]
+[Sahibpreet Singh]
+[Samavesh Aggarwal]
+
 
 
